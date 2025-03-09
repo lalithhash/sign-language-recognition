@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model with Sensor Data</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include Touch SDK script -->
+    <script src="https://cdn.jsdelivr.net/npm/touch-sdk@0.5.2/dist/main.js"></script>
+
+    <!-- Import Map for Three.js and GLTFLoader CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.0/build/three.module.js",
+                "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo" id="logo">HANDSPEAKS</a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="trck.html" class="active">Tracking</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button">
+                <ion-icon name="search-outline"></ion-icon> <!-- Keep the search icon -->
+            </button>
+        </div>
+    </header>
+
+    <script type="module" src="trck.js"></script>
+
+    <script>
+        // Get the logo element
+        const logo = document.getElementById('logo');
+
+        // Add event listener for the logo click
+        logo.addEventListener('click', function () {
+            // Toggle the dark theme class on the body
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+
+</html>
